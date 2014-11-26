@@ -19,6 +19,11 @@ vi /etc/init.d/proxy
 		echo "Stopping proxy zabbix ceilometer"
 		kill -9 $PID
 		;;
+	  restart)
+        echo "Restart proxy zabbix ceilometer"
+        /etc/init.d/proxy stop
+        /etc/init.d/proxy start
+        ;;
 	  *)
 		echo "Usage: /etc/init.d/proxy{start|stop}"
 		exit 1
