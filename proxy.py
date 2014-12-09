@@ -1,0 +1,32 @@
+[zabbix_configs]
+zabbix_admin_user = admin
+zabbix_admin_pass = zabbix
+zabbix_host = 172.16.69.92
+zabbix_port = 10051
+
+[os_rabbitmq]
+rabbit_host = 10.145.37.231
+rabbit_user = guest
+rabbit_pass = $rabbitpass
+
+[ceilometer_configs]
+ceilometer_api_host = 10.145.37.231
+ceilometer_api_port = 8777
+
+[keystone_authtoken]
+admin_user = admin
+admin_password = $adminkeystonepass
+admin_tenant = admin
+keystone_host = 10.145.37.231
+keystone_admin_port = 35357
+keystone_public_port = 5000
+# The port number which the OpenStack Compute service listens on, defined in keystone.conf file
+nova_compute_listen_port = 8774
+
+[zcp_configs]
+# Interval in seconds
+polling_interval = 30
+# template name to be created in Zabbix
+template_name = Template Nova
+# proxy name to be registered in Zabbix
+zabbix_proxy_name = ZCP01
